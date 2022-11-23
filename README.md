@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-Perfumería E-Commerce
+# Perfumería E-Commerce
 
 # Getting Started with Create React App
 
@@ -71,6 +70,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
 # perfumeria-ecommerce
->>>>>>> 1bda2793e91fe27ed6038073141038fed097be3e
