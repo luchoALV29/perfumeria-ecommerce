@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-
+import list from '../list';
 function App() {
   return (
     <div className="App">
@@ -20,6 +20,7 @@ function App() {
           Learn React
         </a> */}
         <Navbar />
+        <list />
       </header>
     </div>
   );
