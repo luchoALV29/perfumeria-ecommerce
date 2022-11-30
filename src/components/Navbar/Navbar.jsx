@@ -1,4 +1,6 @@
-const Navbar = () => {
+import PropTypes from 'prop-types'
+
+const Navbar = ({children}) => {
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"><h3>Perfumeria E-Commerce</h3></a>
@@ -31,8 +33,19 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+            <div>
+                {children}
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search" />
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Búsqueda</button>
+            </form>
         </nav>
     )
+}
+
+Navbar.proptype = {
+    children: PropTypes.element
 }
 
 export default Navbar
