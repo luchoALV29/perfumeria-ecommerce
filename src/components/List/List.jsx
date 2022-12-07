@@ -7,7 +7,7 @@ const List = ({categorias}) => {
             <ul class="list-group">
                 {
                     categorias.map((categoria) => {
-                        return <button type="button" class="list-group-item list-group-item-action">{categoria}</button>
+                        return <button type="button" class="list-group-item list-group-item-action">{categoria.nombre}</button>
                     })
                 }
             </ul>
