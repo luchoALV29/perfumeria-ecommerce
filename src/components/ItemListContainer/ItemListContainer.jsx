@@ -1,15 +1,32 @@
 import PropTypes from 'prop-types'
+import { useEffect } from 'react';
+import { useState } from 'react'
+import Productos from '../../productos';
 
-const ItemListContainer = ({productos}) => {
+const ItemListContainer = ({idCategoria}) => {
+    const [productos, setProductos] = useState(Productos);
+
+    function obtenerProductos(){
+        setProductos(Productos.filter((producto)=>{
+            return producto.categoriaId == idCategoria
+        }));
+    }
+
+    useEffect(()=>{
+        if(idCategoria != null){
+            obtenerProductos()
+        }
+    },[])
+
     return (
         <div className='container-fluid m-3'>
             <div className='row'>
                 {
                     productos.map((producto)=>{
                         return(
-                            <div className="col-3 card m-3">
+                            <div key={producto.id} className="col-3 card m-3">
                                 <div className="card-body">
-                                    <h7>{producto.marca}</h7>
+                                    <h6>{producto.marca}</h6>
                                     <h5 className="card-title">{producto.nombre}</h5>
                                     <p className="card-text">{producto.presentacion}</p>
                                     <h4>${producto.precio}</h4>
@@ -25,7 +42,7 @@ const ItemListContainer = ({productos}) => {
 }
 
 ItemListContainer.proptype = {
-    productos: PropTypes.array.isRequired
+    idCategoria: PropTypes.number
 }
 
 export default ItemListContainer

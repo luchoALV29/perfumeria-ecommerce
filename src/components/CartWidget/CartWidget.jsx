@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 
 const CartWidget = ({cantidadItems}) => {
     return (
-        <div class="pr-3">
-            <span class="material-icons text-dark align-middle">shopping_cart</span>
-            <span class="badge badge-secondary align-top">{cantidadItems}</span>
+        <div className="pr-3">
+            <span className="material-icons text-dark align-middle">shopping_cart</span>
+            <span className="badge badge-secondary align-top">{cantidadItems}</span>
         </div>
     )
 }
