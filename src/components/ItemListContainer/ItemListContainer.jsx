@@ -29,7 +29,7 @@ const ItemListContainer = () => {
                         return(
                             <div key={producto.id} className="col-3 card m-3">
                                 <div className="card-body">
-                                    <img className="card-img-top" src={`images/productos/${producto.imagen}`} alt="Card image cap"/>
+                                    <img className="card-img-top" src={`/images/productos/${producto.imagen}`} alt="Card image cap"/>
                                     <h6>{producto.marca}</h6>
                                     <h5 className="card-title">{producto.nombre}</h5>
                                     <p className="card-text">{producto.presentacion}</p>
