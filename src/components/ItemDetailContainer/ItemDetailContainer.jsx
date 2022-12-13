@@ -1,6 +1,15 @@
-import PropTypes from 'prop-types'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+import Productos from '../../productos';
 
-const ItemDetailContainer = ({producto}) => {
+const ItemDetailContainer = () => {
+    const [producto, setProducto] = useState({}); 
+    const {id} = useParams();
+
+    useEffect(()=>{
+        setProducto(Productos.find(producto => producto.id == id));
+    },[])
+
     return (
         <div className='container m-3'>
             <div className="card text-center">
@@ -20,9 +29,4 @@ const ItemDetailContainer = ({producto}) => {
         </div>
     )
 }
-
-ItemDetailContainer.proptype = {
-    producto: PropTypes.object.isRequired
-}
-
 export default ItemDetailContainer
